@@ -1,0 +1,19 @@
+@import './src/Color.module.scss';
+.header {
+  background: $gray--800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 1.25rem 0;
+}
+
+.header img {
+  width: 7rem;
+  height:auto;
+}
+
+.header strong {
+  font-size: 2rem;
+  line-height: 1.6;
+}

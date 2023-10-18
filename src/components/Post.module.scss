@@ -1,0 +1,133 @@
+@import './src/Color.module.scss';
+
+.post {
+  background: $gray--800;
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.post + .post {
+margin-top: 2rem;
+}// estiliza todos post que vem abaixo do primeiro
+
+.content {
+  line-height: 1.6;
+  color: $gray--300;
+  margin-top: 1.5rem;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content a {
+  font-weight: bold;
+  color: $green--500;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: $green--300;
+}
+
+.post > header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}// pega apenas um header o primeiro
+
+.post > header time {
+  font-size: 0.875rem;
+  color: $gray--400;
+}
+
+.author{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*.author img{
+  width: calc(3rem + 12px);
+  height: calc(3rem + 12px);
+  border-radius: 8px;
+  border: 4px solid $gray--800;
+  outline: 2px solid $green--500;
+} o componente elimina esta estilização
+*/
+
+.authorInfo strong {
+  display: block;
+  color: $gray--100;
+  line-height: 1.6;
+}
+
+.authorInfo span {
+  display: block;
+  font-size: .875rem;
+  color: $gray--400;
+  line-height: 1.6;
+}
+
+// form
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $gray--600;
+}
+
+.commentForm > strong {
+  line-height: 1.6;
+  color: $gray--100;
+}
+
+.commentForm textarea {
+  width: 100%;
+  background: $gray--900;
+  border-radius: 0;
+  resize: none; //para o usuario n redimencionar
+  height: 6rem;
+  padding: 1rem;
+  border-radius: 8px;
+  color: $gray--100;
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+//esconder o button
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+//Mostrar o button
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm button {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: $green--500;
+  color: $white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.commentForm button:not(:disabled):hover {
+  background: $green--300;
+}
+
+.commentForm button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.commentList {
+  margin-top: 2rem;
+}

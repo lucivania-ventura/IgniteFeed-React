@@ -1,0 +1,20 @@
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 2rem;
+  align-items: flex-start; //sempre alinhado ao topo
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5% ;/*quando usamos REM ao fazer isso alteramos o tamanho de todos REMs para este, quando estiver com a tela até  768px*/
+  }
+
+  .wrapper{
+    grid-template-columns: 1fr; //o grid n vai mais ter 2 colunas e sim vai ter uma coluna
+  }
+}
